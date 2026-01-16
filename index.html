@@ -92,7 +92,7 @@
 </section>
 
 <!-- SERVICES -->
-<section class="services">
+<section class="services reveal" id="services">
     <h2 class="heading">Services</h2>
 
     <div class="service-grid">
@@ -127,7 +127,7 @@
 </section>
 
 <!-- PRICING -->
-<section class="price-section">
+<section class="price-section reveal" id="pricing">
   <h2 class="heading">Our Services & Pricing</h2>
   <!-- <p class="subtitle">Professional Home Salon Services</p> -->
 <div class="price-grid">
@@ -247,7 +247,7 @@
 
 
 <!-- WHY US -->
-<section class="why-us">
+<section class="why-us reveal" id="why-us">
   <div class="why-wrapper">
 
       <div class="why-text">
@@ -269,7 +269,7 @@
 
 
 <!-- CTA -->
-<section class="cta">
+<section class="cta reveal" id="contact">
     <h2>Want to look your best ?</h2>
     <!-- <p>+91 7909033855</p> -->
   <a class="dial dial-2" href="tel:+91790903385" class="btn"> 📞 7909 33855
@@ -293,6 +293,24 @@
     </p>
   </div>
 </footer>
+<script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll('.reveal');
+
+    for (let i = 0; i < reveals.length; i++) {
+      let windowHeight = window.innerHeight;
+      let elementTop = reveals[i].getBoundingClientRect().top;
+      let elementVisible = 100;
+
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // Run on load
+</script>
 
 </body>
 </html>

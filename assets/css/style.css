@@ -515,3 +515,18 @@ font-size: 3rem;
     font-size: 58%;
   }
 }
+
+
+
+/* Hidden before scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* Visible after scroll */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
