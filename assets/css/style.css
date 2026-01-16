@@ -2,7 +2,7 @@
     background: linear-gradient(
         rgba(255,195,189,0.10),
         rgba(255,195,189,1)
-    ), url("../img/hero2.png") fixed;
+    ), url("../img/hero2.webp") fixed;
     /* background-image: url("../img/hero1.png"); */
     background-size: cover;
     background-position: center;
